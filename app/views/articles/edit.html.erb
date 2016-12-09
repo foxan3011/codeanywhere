@@ -1,4 +1,8 @@
 <h1>
+  Edit existing articles
+</h1>
+
+<h1>
   Create an article
 </h1>
 <h2>
@@ -11,8 +15,6 @@
   <% end %>
 </ul>
 <% end %>
-
-<%= link_to "Back to article listing", articles_path %>
 
 <%= form_for @article do |f| %>
   <p>
@@ -28,4 +30,4 @@
     
 </p>
 <% end %>
-
+<%= link_to "Back to article listing", articles_path %>
