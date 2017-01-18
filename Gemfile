@@ -38,5 +38,6 @@ gem 'spring',        group: :development
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'byebug'
+gem 'bcrypt', '~>3.1.7'
 
 
