@@ -39,5 +39,6 @@ gem 'spring',        group: :development
 # gem 'capistrano-rails', group: :development
 gem 'byebug'
 gem 'bcrypt', '~>3.1.7'
+gem 'gravtastic'
 
 
