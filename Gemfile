@@ -40,5 +40,5 @@ gem 'spring',        group: :development
 gem 'byebug'
 gem 'bcrypt', '~>3.1.7'
 gem 'gravtastic'
-
-
+gem 'bootstrap-will_paginate', '0.0.10'
+gem 'will_paginate','3.0.7'
