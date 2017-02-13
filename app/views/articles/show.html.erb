@@ -26,7 +26,7 @@
     <%= simple_format(@article.description) %>
   
   
-  <% if logged_in?  && current_user == @article.user %>
+  <% if logged_in?  && (current_user == @article.user || current_user.admin?) %>
    <!-- BC this is the show page and an article instance variable working with -->
   <div class = "article-actions">
     <%= link_to "Edit article", edit_article_path(@article), class: "btn btn-xs btn-primary" %>

@@ -19,6 +19,9 @@ get 'login' , to: 'sessions#new'
 post 'login', to: 'sessions#create'   # actions create post in 'login'.
 delete 'logout', to:'sessions#destroy'  
 
+
+resources :categories, except: [:destroy]
+
   
   
   # Example of regular route:

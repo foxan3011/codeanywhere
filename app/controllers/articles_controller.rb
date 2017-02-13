@@ -17,7 +17,9 @@ class ArticlesController < ApplicationController
   def create
     
     @article = Article.new(article_params)
-    @article.user = current_user
+    @article.user = current_user #@article.user = User.first 
+    #hardcoded the first user as the Creator for all articles from the UI 
+    # set for "current_user" bc we already know that we're going to require a user
     if @article.save
       flash[:success] = "Article was successfully created"
       redirect_to article_path(@article)
@@ -56,7 +58,7 @@ class ArticlesController < ApplicationController
   end
 
   def require_same_user
-    if current_user != @article.user
+    if current_user != @article.user and !current_user.admin?
       flash[:danger] = "You can only edit or delete your own articles"
       redirect_to root_path
     end

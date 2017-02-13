@@ -8,7 +8,6 @@ class ApplicationController < ActionController::Base
   
   
   def current_user
-    
     @current_user ||= User.find(session[:user_id]) if session[:user_id]
 # if session[:user_id] is true, not nil, available set @current_user else nil
 #Current user to check if the user is logged in
