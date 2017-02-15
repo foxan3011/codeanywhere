@@ -25,6 +25,12 @@
     <hr>    
     <%= simple_format(@article.description) %>
   
+  <% if @article.categories.any? %>
+  <p>Categories: <%= render @article.categories %></p>
+  <!-- that a "each method" add articles are categories that each and do 
+  <% end %>
+  
+  
   
   <% if logged_in?  && (current_user == @article.user || current_user.admin?) %>
    <!-- BC this is the show page and an article instance variable working with -->
